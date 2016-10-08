@@ -1,5 +1,4 @@
 # -*- encoding=UTF-8 -*-
-#动态UA
 import random
 import sys
 reload(sys)

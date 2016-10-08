@@ -1,8 +1,8 @@
 # -*- encoding=UTF-8 -*-
-#下载书籍的所有章节到mysql
 import urllib,urllib2,re,time,random,MySQLdb
 from bs4 import BeautifulSoup
 from header import *
+
 def start_read(novel_name,novel_author):
     novel_info=get_novel_id_DB(novel_name,novel_author)
     if(novel_info=='nonono'):
@@ -52,7 +52,7 @@ def get_chapter_text(url,novel_info,index):
             req = urllib2.Request(url, None, req_header)
             resp = urllib2.urlopen(req, None)
             html = resp.read()
-            if(not resp.getcode()==200):
+            if(not resp.getcode()==200)
                 print 'time out！ repeat', url
                 continue
             soup = BeautifulSoup(html, 'html.parser', from_encoding='gbk')
@@ -74,6 +74,7 @@ def get_chapter_text(url,novel_info,index):
         import traceback
         traceback.print_exc()
         exit(-1)
+
 def put_text_DB(novel_id,catalog_name,catalog_content):
     conn = MySQLdb.connect(user='root', passwd='123456',
                            host='localhost', db='langdinovel', charset='utf8')
