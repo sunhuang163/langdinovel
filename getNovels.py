@@ -1,5 +1,6 @@
 # -*- encoding=UTF-8 -*-
 #python2
+#按照分类获得所有的书籍
 import urllib,urllib2,re,random,time
 import MySQLdb
 from bs4 import BeautifulSoup
